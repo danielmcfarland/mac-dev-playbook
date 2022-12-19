@@ -1,21 +1,56 @@
 ---
 downloads: ~/.ansible-downloads/
 
-configure_dotfiles: true
-configure_terminal: true
-configure_osx: true
+configure_dotfiles: false
+configure_terminal: false
+configure_osx: false
 
 # Set to 'true' to configure the Dock via dockutil.
-configure_dock: false
-dockitems_remove: []
-# - Launchpad
-# - TV
-# - Podcasts
-# - 'App Store'
-dockitems_persist: []
-# - name: "Sublime Text"
-#   path: "/Applications/Sublime Text.app/"
-#   pos: 5
+configure_dock: true
+dockitems_remove:
+ - FaceTime
+ - Calendar
+ - Contacts
+ - Reminders
+ - Notes
+ - TV
+ - Music
+ - Podcasts
+ - News
+dockitems_persist:
+- name: "Launchpad"
+  path: "/Applications/Launchpad.app/"
+  pos: 1
+- name: "Safari"
+  path: "/Applications/Safari.app/"
+  pos: 2
+- name: "Messages"
+  path: "/Applications/Messages.app/"
+  pos: 3
+- name: "Mail"
+  path: "/Applications/Mail.app/"
+  pos: 4
+- name: "Maps"
+  path: "/Applications/Maps.app/"
+  pos: 5
+- name: "Photos"
+  path: "/Applications/Photos.app/"
+  pos: 6
+- name: "App Store"
+  path: "/Applications/App Store.app/"
+  pos: 7
+- name: "System Settings"
+  path: "/Applications/System Settings.app/"
+  pos: 8
+- name: "Terminal"
+  path: "/Applications/Utilities/Terminal.app/"
+  pos: 9
+- name: "Xcode"
+  path: "/Applications/Xcode.app/"
+  pos: 10
+- name: "TestFlight"
+  path: "/Applications/TestFlight.app/"
+  pos: 11
 
 configure_sudoers: false
 sudoers_custom_config: ''
@@ -34,52 +69,52 @@ dotfiles_files:
   - .osx
   - .vimrc
 
-homebrew_installed_packages:
-  # - ansible # Installed via Pip.
-  - autoconf
-  - bash-completion
-  - doxygen
-  - gettext
-  - gifsicle
-  - git
-  - github/gh/gh
-  - go
-  - gpg
-  - httpie
-  - iperf
-  - libevent
-  - sqlite
-  - mcrypt
-  - nmap
-  - node
-  - nvm
-  - php
-  - ssh-copy-id
-  - cowsay
-  - readline
-  - openssl
-  - pv
-  - wget
-  - wrk
-  - zsh-history-substring-search
+homebrew_installed_packages: []
+#  - ansible # Installed via Pip.
+#  - autoconf
+#  - bash-completion
+#  - doxygen
+#  - gettext
+#  - gifsicle
+#  - git
+#  - github/gh/gh
+#  - go
+#  - gpg
+#  - httpie
+#  - iperf
+#  - libevent
+#  - sqlite
+#  - mcrypt
+#  - nmap
+#  - node
+#  - nvm
+#  - php
+#  - ssh-copy-id
+#  - cowsay
+#  - readline
+#  - openssl
+#  - pv
+#  - wget
+#  - wrk
+#  - zsh-history-substring-search
 
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
 
 homebrew_cask_appdir: /Applications
-homebrew_cask_apps:
-  - chromedriver
-  - docker
-  - dropbox
-  - firefox
-  - google-chrome
-  - handbrake
-  - licecap
-  - sequel-ace
-  - slack
-  - sublime-text
-  - transmit
+homebrew_cask_apps: []
+#  - chromedriver
+#  - docker
+#  - dropbox
+#  - firefox
+#  - google-chrome
+#  - handbrake
+#  - licecap
+#  - sequel-ace
+#  - slack
+#  - sublime-text
+#  - transmit
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
